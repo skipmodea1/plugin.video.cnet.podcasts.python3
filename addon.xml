@@ -24,7 +24,7 @@
     <forum>http://forum.xbmc.org/showthread.php?tid=192868</forum>
     <website>http://www.cnet.com/cnet-podcasts</website>
     <email></email>
-    <source>https://github.com/skipmodea1/plugin.video.cnet.podcasts</source>
+    <source>https://github.com/skipmodea1/plugin.video.cnet.podcasts.python3</source>
     <assets>
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
