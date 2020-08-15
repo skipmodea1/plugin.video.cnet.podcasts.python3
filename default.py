@@ -69,7 +69,6 @@ def display_categories():
                 if 'All' in str(name):
                     display_category(str(i['name']))
                     xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
-                    set_view_mode()
                     xbmcplugin.endOfDirectory(int(sys.argv[1]))
                     break
             else:
@@ -251,21 +250,6 @@ def get_params():
     return p
 
 
-def set_view_mode():
-    view_modes = {
-        '0': '502',
-        '1': '51',
-        '2': '3',
-        '3': '504',
-        '4': '503',
-        '5': '515'
-    }
-    view_mode = SETTINGS.getSetting('view_mode')
-    if view_mode == '6':
-        return
-    xbmc.executebuiltin('Container.SetViewMode(%s)' % view_modes[view_mode])
-
-
 if sys.version_info[0] > 2:
     unicode = str
 
@@ -316,7 +300,6 @@ if not mode:
 elif mode == 'category':
     display_category(params['url'])
     xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
-    set_view_mode()
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 elif mode == 'resolve':
     item = xbmcgui.ListItem(path=params['url'])
